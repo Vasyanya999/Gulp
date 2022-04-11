@@ -4,7 +4,7 @@ const newer = require('gulp-newer')
 
 function img() {
 
-  return src('app/image/**/*.{png,jpeg,jpg,gif,svg}')
+  return src('app/images/**/*.{png,jpeg,jpg,gif,svg}')
     // .pipe(newer('../../public/image'))
     // .pipe(imagemin({
     //   verbose: true,

@@ -1,3 +1,9 @@
+// Запуск в режиме разработки gulp dev
+// Собрать проект gulp build
+// Изменения в папке fonts неотслеживаются, поэтому после добавления туда шрифтов необходимо перезапустить режим разработки
+
+
+
 const { parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 
@@ -40,7 +46,7 @@ const build = series(
 
 const dev = series(
   clear,
-  parallel(html, styles, scripts, img),
+  parallel(html, styles, scripts, img, font),
   parallel(startWatch, server)
 )
 

@@ -9,7 +9,7 @@ function font() {
   return src('app/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}')
     // .pipe(newer('app/fonts'))
     .pipe(fonter({
-      formats: ['ttf', 'woff', 'eot', 'svg']
+      formats: ['ttf', 'woff']
     }))
     .pipe(dest('./public/fonts'))
     .pipe(ttf2woff2())
